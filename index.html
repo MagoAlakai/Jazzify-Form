@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Jazzify</title>
+    <!--Font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <!--Custom Css-->
+    <link rel="stylesheet" href="styles.css">
+    <!--import font Oswald y Montserrat-->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+    <!--logo, barra de navegación y buscador-->
+    <header class="header fixed-top">
+        <div class="up-header row">
+            <div class="col-7 col-sm-6 col-md-2 d-flex justify-content-center d-flex align-items-center">
+                <img class="logo img-fluid" src="img/Logo.png" alt="Logo Jazzify">
+            </div>
+
+            <div class="navbar-mobile col-5 col-sm-6 col-md-6 ">
+                <nav class="navbar navbar-expand-sm">
+                    <button class="navbar-toggler navbar-light bg-light" type="button" data-toggle="collapse" data-target="#opciones">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
+                    <!-- enlaces -->
+                    <div class="collapse navbar-collapse" id="opciones">   
+                      <ul class="navbar-nav">
+                        <li class="nav-item menu-items">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item menu-items">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item menu-items">
+                            <a class="nav-link" href="#">Music</a>
+                        </li>
+                        <li class="nav-item menu-items">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>           
+                      </ul>
+                    </div>
+                  </nav>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-4">
+                <ul class="nav-right d-flex align-items-center">
+                    <li>    
+                        <form class="d-flex pb-2 pr-3" id="mySearch" name="mySearch">
+                            <div class="d-block" id="input_logIn">
+                                <input 
+                                class="form-control" 
+                                id="input_search" 
+                                type="text" 
+                                name="input_search"
+                                >
+                                <div 
+                                    class="invalid-feedback" id="errorSearch">
+                                </div>
+                            </div>
+                            
+                            <button 
+                                class="btn btn-outline-secondary" 
+                                onclick="return search()" 
+                                type="button" 
+                                id="button_search"
+                            >
+                                <i class="fas fa-search"></i>
+                            </button>
+                            <div 
+                                class="invalid-feedback" 
+                                id="errorSearch"
+                                >
+                            </div>  
+                        </form>
+                    </li>
+                    <div class="d-flex">
+                        <li>
+                            <a href="./formulario_registro/formulari.html">
+                                <button class="mb-2 mr-3">Register</button>  
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./log_in/logIn_formulari.html">
+                                <img 
+                                    class="log_in mb-2" 
+                                    src="./img/iniciar-sesion.png" alt="Log in"
+                                > 
+                            </a>
+                        </li>
+                    </div>
+                    
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <!--foto de portada y selección por tipos: artista, estilo o época-->
+        <section class="selection">
+            <div class="foto-portada d-xs-none d-sm-flex d-md-flex d-lg-flex d-xl-flex">
+                <img 
+                    class="w-100" 
+                    src="img/Cabecera 3.jpeg" 
+                    alt="cabecera"
+                >
+            </div>
+            <div class="slogan1">
+                <h1>Your Jazz music store!</h1>
+            </div>
+            <div class="slogan2">
+                <h2>All the Jazz music from all ages and styles</h2>
+                <h4>It don't mean a thing, if it ain't got that swing!</h4>
+            </div>
+            <div>
+                <div class="choose-music row">
+                    <a href="#" class="col-12 col-sm-4 position">
+                        <img 
+                            class="foto-choose img-fluid border" 
+                            src="img/billie_holiday 2.png" alt="Artist"
+                        >
+                        <div class="choose-options">
+                            <h1 class="title-artist">Artist</h1>
+                            <p class="description">If there ever someone recorded a jazz tune, this is the place to find it in one click!</p>
+                        </div>
+                    </a>
+                    <a href="#"class="col-12 col-sm-4 position">
+                        <img 
+                            class="foto-choose img-fluid border" 
+                            src="img/historia-del-jazz-swing.jpg" 
+                            alt="Styles"
+                        >
+                        <div class="choose-options">
+                            <h1 class="title-styles">Styles</h1>
+                            <p class="description">Because jazz is a big family: swing era, bee bop, coll jazz, vanguard, free jazz etc...</p>
+                        </div>
+                    </a>
+                    <a href="#" class="col-12 col-sm-4 position">
+                        <img 
+                            class="foto-choose img-fluid border" 
+                            src="img/ages of jazz.jpg" alt="Ages"
+                        >
+                        <div class="choose-options">
+                            <h1 class="title-ages">Ages</h1>
+                            <p class="description">You can find jazz music from any decade, from early 20th century until now.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!--nuevos discos y novedades-->
+        <article class="new-music">
+            <div class="title-new">
+                <h3 class="new_albums">New albums & Highlights</h3>
+                <h5>Discover the newest jazz music!</h5>
+            </div>
+            <div class="highlights row">
+                <a href="#" class="col-12 col-sm-4 box">
+                    <iframe 
+                        class="band-video embed-responsive" width="400" 
+                        height="225" 
+                        src="https://www.youtube.com/embed/OJiFZe77IIw" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                    <div class="band"> 
+                        <h1>The Swing Shouters - "Savoy Ballroom"</h1>
+                        <p>The golden Swing era is alive in this special new album.</p>
+                    </div>
+                </a>
+                <a href="#" class="col-12 col-sm-4 box">
+                    <iframe 
+                        class="band-video embed-responsive" width="400" 
+                        height="225" 
+                        src="https://www.youtube.com/embed/yu1lYjSkLyk" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                    <div class="band"> 
+                        <h1>Carolina Reapers - "Down by the riverside"</h1>
+                        <p>Blues, rhythm & blues, and the best swing from the 40's and 50's.</p>
+                    </div>
+                </a>
+                <a href="#" class="col-12 col-sm-4 box">
+                    <iframe 
+                        class="band-video embed-responsive" width="400" 
+                        height="225" 
+                        src="https://www.youtube.com/embed/k4NPlc4tDNo" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                    <div class="band"> 
+                        <h1>Pol Prats Quintet - "Do it the hard way"</h1>
+                        <p>Expected new album from this amazing tenor sax player.</p>
+                    </div>
+                </a>
+            </div>
+        </article>
+        <!--artista del mes: biografía y disco semanal-->
+        <article class="artists">
+            <div class="title-artist-month">
+                <h3 class="artist">Artist of the month</h3>
+                <h5>MILES DAVIS</h5>
+            </div>
+            <div class="artist-month row">
+                
+                <div class="album col-12 col-sm-6 row">
+                    <a class="col-12 col-sm-6" href="#">
+                        <img 
+                            class="foto-album img-fluid border" 
+                            src="img/Miles Final.jpg" alt="Styles"
+                        >
+                    </a>
+                    <div class="title-biography col-12 col-sm-6"> 
+                        <h1>Biography</h1>
+                        <p>Discover one of the most important trumplet players and composer of all times. Miles davis changed the path of Jazz with his need of creating new ways of expression</p>
+                    </div>
+                </div>
+                <div class="album col-12 col-sm-6 row">
+                    <a class="col-12 col-sm-6" href="#">
+                        <img class="foto-album img-fluid border" src="img/birth cool.jpg" alt="Styles">
+                    </a>
+                    <div class="title-album col-12 col-sm-6"> 
+                        <h1>Album of the week - "THE BIRTH OF THE COOL"</h1>
+                        <p>The album were Miles Davis changed the path once again, creating the coll jazz style. .</p>
+                    </div>
+                </div>
+            </div>
+        </article class="artists">
+    </section>
+    <!--pié de página-->
+    <footer class="footer">
+        <!--formulario de registro-->
+        <div id="registration-form">
+            <h2 class="title-registration">Register and get access to the biggest jazz collection!</h2>
+            <div class="registration-item d-flex justify-content-center align-items-center col-12">
+                <a href="./formulario_registro/formulari.html">
+                    <button>Register</button> 
+                </a>
+            </div>
+        </div>
+        <!--redes sociales-->
+        <div class="social row">
+            <a class="col-3 d-flex justify-content-center align-items-center " href="#"><img class="social-item" src="img/iconfinder_circle-facebook__317752.png" alt="facebook"></a>
+            <a class="col-3 d-flex justify-content-center align-items-center " href="#"><img class="social-item" src="img/iconfinder_Social-media_Youtube_4362951.png" alt="youtube"></a>
+            <a class="col-3 d-flex justify-content-center align-items-center " href="#"><img class="social-item" src="img/iconfinder_instagram_2142569.png" alt="pinterest"></a>
+            <a class="col-3 d-flex justify-content-center align-items-center " href="#"><img class="social-item" src="img/iconfinder_instagram_2142569.png" alt="instagram"></a>
+        </div>
+        <div class="copyright">
+            <p>Copyright Jazzify - 2020</p>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./busqueda/busqueda.js" type="text/javascript"></script>
+</body>
+</html>
